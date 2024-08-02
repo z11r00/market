@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="酷D极客兴趣交友，发现酷的事，发现酷的人">
+   <meta name="keywords" content="酷D,酷D官网,酷D官网下载,酷D app,酷D app官网,酷安,小红书,第一弹,短视频,伊对,绿洲,积木,默往,同桌游戏,社交聊天,饭局狼人杀,一对一视频,直播软件,约聊,视频交友,婚恋,聊天软件,画世界,视频聊天,同城约,skype,91短视频,和平精英助手,附近约炮,茄子视频,同城约炮,快猫,同桌,闲聊,菜鸡,饭局狼人,小红书app,视频软件,玩吧app,闲来,wetalk,附近交友,百合网,美女,崽崽,微爱,nico,掌嗨,同城交友,伴心,懂表帝,成人视频,阅扑,语音聊天,易班,多闪,富二代,搜书大师,好游快爆,处对象,快猫成人短视频,腾讯直播,推理大师,克拉克拉,383棋牌,语音交友,约会软件,虫虫助手,乐信,同城相亲,伊对相亲交友,赫兹,刷宝短视频赚钱,小可爱,恋爱密室,皮皮蟹,某人,233小游戏,丝瓜视频,飞聊,不就,剧本,喜翻,K遇,多聊,直播平台,港股开户,猎游,来玩,草莓视频,popi,同城约爱,绿洲app,耳觅,九秀直播,tumblr,游戏云咖,快聊,大神打卡,趣味恐龙,老福特,lutube,墨往,香芋星球,漂流,zepeto">
+    <title>酷D|发现酷De事，发现酷De人</title>
+    <script src="js/public.js"></script>  
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <script type="text/javascript" src="bouncebox-plugin/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="bouncebox-plugin/jquery.bouncebox.1.0.js"></script>
+    
+</head>
+<style>
+    body{
+		font-size: 16px;
+	}
+    .xzbox{width:.97rem;height:.4rem;border:1px solid #00FFFF;border-radius: .3rem;transition: all .6s;}
+    .xzbox1check{background:#00FFFF;color:#0E101C !important}
+    .xzbox2check{background:#0E101C !important;color:#00FFFF !important}
+    .listtitle{color:#00FFFF;font-size:0.5rem;font-weight: bold;}
+    .updown{width: 0; height: 0;border-left: .15rem solid transparent;border-right: .15rem solid transparent;border-top: .2rem solid #00FFFF;}
+    .listbox{margin-bottom:1.2rem;}
+    .sd_top{width: 60%;justify-content: center;}
+    .sd_top2{text-align: center;}
+    .bottom{background-color: #181A22;width: 100%;height: 2.9rem;}
+
+    /* 移动端样式 */
+    @media screen and (max-width: 1000px){
+        body{
+					font-size: 0.28rem;
+				}
+      .head{display: none;}
+      .head2{padding:0 .3rem;}
+      .sd_topbox{display: none;}
+      .xzbox{width:1.5rem;height:.6rem;border:1px solid #00FFFF;border-radius: .3rem;}
+      .listbox{display: none;}
+      .bottom{display: none;}
+      .bottom1{display: block;background-color: #181A22;width: 100%;height: 8rem;margin-top: .6rem;}
+    }
+
+    /* pc端样式 */
+    @media screen and (min-width: 1000px){
+      .head2{display: none;}
+      .sdmain{width:60%}
+      .sd_top2box{display: none;}
+      .listbox2{display: none;}
+      .bottom1{display: none;}
+      #box{display: none;}
+    }
+
+    #box{
+		/* display: block; */
+	   	background:rgba(0,0,0,.8);
+	   	height:4.2rem;
+	   	padding-top:15px;
+	   	width:96%;
+	   	border:.01rem solid #54BBDE;
+	   	color:#fff;
+	   	left: 2% !important;
+	   	margin-left: 0 !important;
+		border-radius: .1rem;
+	}
+</style>
+<body>
+    <div class="sdmain" style="margin:0 auto;">
+        <div id="box" class="ppbox">
+            <div class="flex jc-end">
+                <img src="img/close.png"  style="width: .5rem;height: .5rem;margin-right: .2rem;" class="close">
+            </div>
+            <div class="fdc ai-center jc-center">
+                <div class="cursor mg-t-30">首页</div>
+                <div onclick="tz(1)" class="cursor mg-t-30">商务合作</div>
+                <div onclick="tz(2)" class="cursor mg-t-30">关于我们</div>
+                <div onclick="tz(3)" class="cursor mg-t-30">联系我们</div>
+            </div>
+            <div class="fdc ai-center jc-center mg-t-20">
+                <div class="" style="border-bottom: 1px solid #4D4D4D;width: 80%;"></div>
+                <img src="img/shanduijpg.jpg"  style="width: .8rem;height: .8rem;margin-top: .2rem;" class="bra10">
+            </div>
+            
+        </div>
+        <!-- pc端可见 -->
+        <div class="head fsb" style="margin-top:.25rem;">
+            <div class="flex ai-center">
+                <img src="img/logo.png" alt="" style="width:.4rem;height:.4rem;">
+                <span style="font-size:.3rem;margin-left:.1rem;">酷D</span>
+            </div>
+            <div class=" fsa" style="width:50%;">    
+                <span class="" style="cursor:pointer" >首页</span>
+                <span onclick="tz(1)" style="cursor:pointer">商务合作</span>
+                <span onclick="tz(2)" style="cursor:pointer">关于我们</span>
+                <span onclick="tz(3)" style="cursor:pointer">联系我们</span>
+            </div>
+        </div>
+        <!-- 移动端可见 -->
+        <div class="head2" style="margin-top:.25rem;">
+            <div class="flex fsb" style="width:100%;">
+                <img src="img/shanduiimg.png" alt="" style="width:1.5rem;height:.28rem;">
+                <img class="image" src="img/cd.png" alt="" style="width:.35rem;height:.3rem;">
+            </div>
+            
+        </div>
+        <!-- pc -->
+        <div class="flex sd_topbox" style="margin-top:1rem;">
+            <div class=" fdc sd_top" >
+                <p class="listtitle">发现酷De事，发现酷De人</p>
+                <div class="" style="margin:.3rem 0;width:70%;">
+                    <p style="line-height: .3rem;letter-spacing: .01rem;">酷D是一款为你定制的有趣好玩的陌生社交App。完善的社交服务机制，让你快速匹配到灵魂知己。</p>
+                    <p style="line-height: .3rem;letter-spacing: .01rem;"> 脑洞大开的新玩法，让你不再无趣。在这里大家可以找到共同兴趣的好友，探索新的兴趣领域。</p>
+                   
+                </div>
+                <div class="flex">
+                   <div class="xzbox fcc xzbox1" onclick="xz(1)" style="color:#00FFFF;margin-right: .3rem;cursor:pointer">
+                       <img class="xzimg1" src="img/android_blue.png" alt="" style="width:.17rem;height:.19rem;margin-right:.05rem;">
+                       <span>下载</span>
+                   </div>
+                   <div class="xzbox fcc xzbox2" onclick="xz(2)" style="color:#0E101C;background:#00FFFF;cursor:pointer">
+                       <img class="xzimg2" src="img/ios_black.png" alt="" style="width:.21rem;height:.23rem;margin-right:.05rem;">
+                       <span>下载</span>
+                   </div>
+                </div>
+            </div>
+            <div class="" style="width:40%;text-align:center;">
+                <img class="animate__animated animate__fadeInRight" src="img/list1.png" alt="" style="width:5.7rem;height:3.25rem;">
+            </div>
+        </div>
+        <!-- 移动 -->
+        <div class="fdc fcc sd_top2box"> 
+            <div class="sd_top2" >
+                <img src="img/colorlogo.png" style="width:1rem;height:1rem;" alt="">
+                <p class="listtitle" style="font-size:.35rem;margin:.4rem 0">发现酷De事，发现酷De人</p>
+                <img src="img/colorsdtxt.png" style="width:1rem;height:.5rem;" alt="">
+            </div>
+            <div class="" style="text-align:center;">
+                <img src="img/list1.png" alt="" style="width:80%;height:3.25rem;">
+            </div>
+            <div class="flex">
+                <div class="xzbox fcc " onclick="xz(1)" style="color:#00FFFF;margin-right: .3rem;cursor:pointer">
+                    <img  src="img/android_blue.png" alt="" style="width:.3rem;height:.3rem;margin-right:.05rem;">
+                    <span>下载</span>
+                </div>
+                <div class="xzbox fcc " onclick="xz(2)" style="color:#0E101C;background:#00FFFF;cursor:pointer">
+                    <img class="xzimg2" src="img/ios_black.png" alt="" style="width:.5rem;height:.5rem;margin-right:.05rem;">
+                    <span>下载</span>
+                </div>
+             </div>
+        </div>
+        <div class="fdc fcc" style="margin:.5rem 0;">
+            <img src="img/logoddd.gif" alt="" style="width:1.5rem;height:1.5rem;">
+            <img src="img/shanduiimg.png" alt="" style="width:2.5rem;height:.4rem;margin:.15rem 0 .3rem">
+            <div class="updown"></div>
+        </div>
+        <!-- pc -->
+        <div class="flex listbox">
+            <div class="" style="width:55%;">
+                <img class="animate__animated litem1" src="img/list2.png" alt="" style="width:4.75rem;height:3.4rem;display: none;">
+            </div>
+            <div class="fdc animate__animated ltxt1" style="width: 45%;justify-content: flex-end;display: none;" >
+                <p class="listtitle" style="font-size:.35rem;">因为好玩，所以更近</p>
+                <p class="" style="font-size:.2rem;margin:.2rem 0 .1rem;color:#00FFFF">你的社交游乐园</p>
+                <div class="" style="margin:.3rem 0;width:90%;">
+                    <p style="line-height: .3rem;letter-spacing: .01rem;">欢乐的高质量短视频社交，展示个性，发现精彩；在社区分享你的心情，找到有趣的人。真正的陌生人群信息展示，让你尽情呐喊，无需担心亲朋好友看到。</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="flex listbox">
+            <div class="fdc animate__animated ltxt2" style="width: 40%;display: none;" >
+                <p class="listtitle" style="font-size:.35rem">闪一下，看见你</p>
+                <p class="" style="font-size:.2rem;margin:.2rem 0 .1rem;color:#00FFFF">闪电配对，快速脱单</p>
+                <div class="" style="margin:.3rem 0;">
+                    <p style="line-height: .3rem;letter-spacing: .01rem;">通过语音配对、视频配对等方式快速匹配对的人，通过独有功能解决与陌生人聊天的抗拒心理、谨慎态度，主动创建有价值的场景和话题，顺利建立朋友关系，减少每个用户的交友时间成本，拉近距离，快速脱单。</p>
+                    
+                </div>
+            </div>
+            <div class="" style="width:55%;text-align:right;">
+                <img class="animate__animated litem2" src="img/list3.png" alt=""  style="width:4.78rem;height:3.3rem;display: none;">
+            </div>
+           
+        </div>
+        <div class="flex listbox">
+            <div class="" style="width:55%;">
+                <img class="animate__animated litem3" src="img/list4.png" alt="" style="width:4.8rem;height:3.2rem;display: none;">
+            </div>
+            <div class="fdc animate__animated ltxt3" style="width: 45%;justify-content: center;display: none;" >
+                <p class="listtitle" style="font-size:.35rem">小手一动，就有收益</p>
+                <p class="" style="font-size:.2rem;margin:.2rem 0 .1rem;color:#00FFFF">共创社交流量池，共享社交红利</p>
+                <div class="" style="margin:.3rem 0;width:90%;">
+                    <p style="line-height: .3rem;letter-spacing: .01rem;">分享赚钱，收益不断。邀请好友即可获得收益，越多分享，越多价值。</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="flex listbox">
+            <div class="fdc animate__animated ltxt4 " style="width: 45%;justify-content: center;display: none;" >
+                <p class="listtitle" style="font-size:.3rem;">灵魂匹配，找到对的人</p>
+                <p class="" style="font-size:.2rem;margin:.2rem 0 .1rem;color:#00FFFF">精准匹配，灵魂之交</p>
+                <div class="" style="margin:.3rem 0;width:90%;">
+                    <p style="line-height: .3rem;letter-spacing: .01rem;">酷D是一款更懂你的灵魂APP，通过大数据分析，自动为你匹配心灵相通的小伙伴。TA与你也许不在同一个城市，但一定是最适合你的交友对象。找到对的人，减少无效社交，彼此知心，灵魂相映，这是闪对的初衷。</p>
+                    
+                </div>
+            </div>
+            <div class="" style="width:55%;text-align:center;">
+                <img class="animate__animated litem4" src="img/list5.png" alt="" style="width:5.46rem;height:3rem;display: none;">
+            </div>
+           
+        </div>
+        <div class="flex listbox">
+            <div class="" style="width:55%;text-align:center;">
+                <img class="animate__animated litem5" src="img/list6.png" alt="" style="width:5.21rem;height:3.88rem;margin-right:.5rem;display: none;">
+            </div>
+            <div class="fdc animate__animated ltxt5 " style="width: 45%;justify-content: center;display: none;" >
+                <p class="listtitle" style="font-size:.3rem;">你我，本应真实</p>
+                <p class="" style="font-size:.2rem;margin:.2rem 0 .1rem;color:rgb(0, 14, 14)">严格审核，真人用户</p>
+                <div class="" style="margin:.3rem 0;">
+                    <p style="line-height: .3rem;letter-spacing: .01rem;">通过真人认证，利用人们身份属性彼此对接，充分增加陌生人群之间的安全感。平台不要求用户使用证件信息实名，以此绝对保护了所有用户的隐私信息安全，不再担心个人信息被利用或泄露，减少社交压力。</p>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- 移动端 -->
+        <div class="listbox2" style="margin: 1rem 0;">
+            <div class="" style="text-align:center;" >
+                <p class="listtitle" style="font-size:.35rem;margin:.3rem  0">因为好玩，所以更近</p>
+                <p class="" style="font-size:.2rem;margin:.2rem 0 .1rem;color:#00FFFF">你的社交游乐园</p>
+                <div class="" style="margin:.3rem 0">
+                    <p style="line-height: .4rem;letter-spacing: .01rem;font-size:.2rem;padding:0 .5rem">欢乐的高质量短视频社交，展示个性，发现精彩；在社区分享你的心情，找到有趣的人。真正的陌生人群信息展示，让你尽情呐喊，无需担心亲朋好友看到。</p>
+                    
+                </div>
+            </div>
+            <div class="" style="text-align: center;margin:.5rem 0 0">
+                <img src="img/list2.png" alt="" style="width:80%;height:3rem;">
+            </div>
+        </div>
+        <div class="listbox2" style="margin-bottom: 1rem;">
+            <div class="" style="text-align:center;" >
+                <p class="listtitle" style="font-size:.35rem;margin:.3rem  0">酷一下，看见你</p>
+                <p class="" style="font-size:.2rem;margin:.2rem 0 .1rem;color:#00FFFF">酷D配对，快速脱单</p>
+                <div class="" style="margin:.3rem 0">
+                    <p style="line-height: .4rem;letter-spacing: .01rem;font-size:.2rem;padding:0 .5rem">通过真人认证，利用人们身份属性彼此对接，充分增加陌生人群之间的安全感。平台不要求用户使用证件信息实名，以此绝对保护了所有用户的隐私信息安全，不再担心个人信息被利用或泄露，减少社交压力。</p>
+                    
+                </div>
+            </div>
+            <div class="" style="text-align: center;margin:.5rem 0 0">
+                <img src="img/list3.png" alt="" style="width:80%;height:3rem;">
+            </div>
+        </div>
+        <div class="listbox2" style="margin-bottom: 1rem;">
+            <div class="" style="text-align:center;" >
+                <p class="listtitle" style="font-size:.35rem;margin:.3rem  0">小手一动，就有收益</p>
+                <p class="" style="font-size:.2rem;margin:.2rem 0 .1rem;color:#00FFFF">共创社交流量池，共享社交红利</p>
+                <div class="" style="margin:.3rem 0">
+                    <p style="line-height: .4rem;letter-spacing: .01rem;font-size:.2rem;padding:0 .5rem">分享赚钱，收益不断。邀请好友即可获得收益，越多分享，越多价值。</p>
+                    
+                </div>
+            </div>
+            <div class="" style="text-align: center;margin:.5rem 0 0">
+                <img src="img/list4.png" alt="" style="width:80%;height:3rem;">
+            </div>
+        </div>
+        <div class="listbox2" style="margin-bottom: 1rem;">
+            <div class="" style="text-align:center;" >
+                <p class="listtitle" style="font-size:.35rem;margin:.3rem  0">灵魂匹配，找到对的人</p>
+                <p class="" style="font-size:.2rem;margin:.2rem 0 .1rem;color:#00FFFF">精确匹配，灵魂之交</p>
+                <div class="" style="margin:.3rem 0">
+                    <p style="line-height: .4rem;letter-spacing: .01rem;font-size:.2rem;padding:0 .5rem">酷D是一款为你定制的有趣好玩的陌生社交App。完善的社交服务机制，让你快速匹配到灵魂知己。</p>
+                    
+                </div>
+            </div>
+            <div class="" style="text-align: center;margin:.5rem 0 0">
+                <img src="img/list5.png" alt="" style="width:80%;height:3rem;">
+            </div>
+        </div>
+        <div class="listbox2" style="margin-bottom: 1rem;">
+            <div class="" style="text-align:center;" >
+                <p class="listtitle" style="font-size:.35rem;margin:.3rem  0">你我，本应真实</p>
+                <p class="" style="font-size:.2rem;margin:.2rem 0 .1rem;color:#00FFFF">严格审核，真人用户</p>
+                <div class="" style="margin:.3rem 0">
+                    <p style="line-height: .4rem;letter-spacing: .01rem;font-size:.2rem;padding:0 .5rem">通过真人认证，利用人们身份属性彼此对接，充分增加陌生人群之间的安全感。平台不要求用户使用证件信息实名，以此绝对保护了所有用户的隐私信息安全，不再担心个人信息被利用或泄露，减少社交压力。</p>
+                    
+                </div>
+            </div>
+            <div class="" style="text-align: center;margin:.5rem 0 0">
+                <img src="img/list6.png" alt="" style="width:80%;height:4rem;">
+            </div>
+        </div>
+        <div style="text-align: center;margin-bottom: 1rem;">
+            <p style="line-height: .4rem;padding:0 .3rem;">视频、音频、文字多彩交互 | 社区交友 | 短视频 | LBS社交 | 好友守护 | 贵族特权 | 礼物打赏 | 线下活动</p>
+            <p style="color:#00FFFF;font-size:.25rem;margin:.35rem 0;">更多精彩，等你发现</p>
+            <div class="flex fcc sd_topbox">
+                <div class="xzbox fcc xzbox1" onclick="xz(1)" style="color:#00FFFF;margin-right: .3rem;cursor:pointer">
+                    <img class="xzimg1" src="img/android_blue.png" alt="" style="width:.17rem;height:.19rem;margin-right:.05rem;">
+                    <span>下载</span>
+                </div>
+                <div class="xzbox fcc xzbox2" onclick="xz(2)" style="color:#0E101C;background:#00FFFF;cursor:pointer">
+                    <img class="xzimg2" src="img/ios_black.png" alt="" style="width:.21rem;height:.23rem;margin-right:.05rem;">
+                    <span>下载</span>
+                </div>
+             </div>
+             <div class="flex fcc sd_top2box">
+                <div class="xzbox fcc " onclick="xz(1)" style="color:#00FFFF;margin-right: .3rem;cursor:pointer">
+                    <img  src="img/android_blue.png" alt="" style="width:.3rem;height:.3rem;margin-right:.05rem;">
+                    <span>下载</span>
+                </div>
+                <div class="xzbox fcc " onclick="xz(2)" style="color:#0E101C;background:#00FFFF;cursor:pointer">
+                    <img class="xzimg2" src="img/ios_black.png" alt="" style="width:.5rem;height:.5rem;margin-right:.05rem;">
+                    <span>下载</span>
+                </div>
+             </div>
+        </div>
+    </div>
+    <div class="bottom fcc" style="">
+        <div class="" style="width: 50%;">
+            <div class="fsb">
+                <div class="flex jc-sb" style="width: 30%;">
+                    <div class="">
+                        <div class="">关于酷D</div>
+                        <div class="mg-t-20" style="color: rgba(255,255,255,.5);">
+                            <div class="">关于酷D团队</div>
+                            <div class="mg-t-20 cursor">隐私服务协议</div>
+                            <div class="mg-t-20">联系我们</div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="">商务合作</div>
+                        <div class="mg-t-20" style="color: rgba(255,255,255,.5);">
+                            <div class="">合作模式</div>
+                            <div class="mg-t-20">合作条款</div>
+                            <div class="mg-t-20">合作邮箱</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex jc-sb" style="width: 30%;">
+                    <div class="fdc ai-center">
+                        <img src="img/gzh.png" style="width: .9rem;height: .9rem;">
+                        <div class="mg-t-10">官方微信公众号</div>
+                    </div>
+                    <div class="fdc ai-center">
+                        <img src="img/weibo.png" style="width: .9rem;height: .9rem;">
+                        <div class="mg-t-10">官方微博</div>
+                    </div>
+                </div>
+            </div>
+            <div class="" style="width: 100%;border-bottom: 1px solid #979797;margin: .2rem 0;"></div>
+            <div class="" style="color: rgba(255,255,255,.5);text-align: center;">© 2020 北桥苏个人所有</div>
+            <div class="fcc mg-t-20">
+                <!-- <div class="" style="color: rgba(255,255,255,.5);margin-right: .1rem;">粤公网安备 44030502001365号</div> -->
+                <div class="" style="color: rgba(255,255,255,.5);margin-left: .1rem;">赣ICP备19161313号-1</div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom1 fcc" style="">
+        <div class="fdc ai-center jc-center" style="height: 100%;">
+            <div class="bra10 fcc bg-fff" style="width: 0.8rem;height: 0.8rem;">
+                <img src="img/shanduijpg.jpg" style="width: 0.7rem;height: 0.7rem;" class="bra10">
+            </div>
+            <img src="img/sd.png" style="width: 0.8rem;height: .4rem;" class="tmmgin-30">
+            <div class="">发现酷De事，发现酷De人</div>
+            <div class="mg-t-60 fcc">
+                <img src="img/weibos.png" style="width: .44rem;height: .34rem;" onclick="tiao(1)">
+                <img src="img/wxs.png" style="width: .44rem;height: .34rem;" class="lrmg-40" onclick="tiao(2)">
+                <img src="img/toutiaos.png" style="width: .44rem;height: .34rem;" onclick="tiao(3)">
+            </div>
+            <div class="mg-t-40">
+                <div class="flex" style="">
+                    <div class="mg-r-50">
+                        <div class="">关于酷D</div>
+                        <div class="mg-t-20" style="color: rgba(255,255,255,.5);">
+                            <div class="">关于酷D团队</div>
+                            <div class="mg-t-20 cursor">隐私服务协议</div>
+                            <div class="mg-t-20">联系我们</div>
+                        </div>
+                    </div>
+                    <div class="mg-l-50">
+                        <div class="">商务合作</div>
+                        <div class="mg-t-20" style="color: rgba(255,255,255,.5);">
+                            <div class="">合作模式</div>
+                            <div class="mg-t-20">合作条款</div>
+                            <div class="mg-t-20">合作邮箱</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mg-t-40" style="color: rgba(255,255,255,.2);text-align: center;">© 2020 北桥苏个人所有</div>
+            <div class="fcc mg-t-20">
+                <!-- <div class="" style="color: rgba(255,255,255,.2);margin-right: .1rem;">粤公网安备 44030502001365号</div> -->
+                <div class="" style="color: rgba(255,255,255,.2);margin-left: .1rem;">赣ICP备19161313号-1</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+ //    function tiao(e) {
+	// 			if(e == 1){
+	// 				window.location.href = 'https://weibo.com/shandui2020?is_all=1'
+	// 			}else if(e == 2){
+	// 				window.location.href = 'https://mp.weixin.qq.com/s/cBnNbAswTc33WLmAvjlnng'
+	// 			}else if(e == 3){
+	// 				window.location.href = 'https://www.toutiao.com/c/user/3302585548156312/#mid=1652700169357326'
+	// 			}
+	// }
+
+    function tiao(e) {
+                if(e == 1){
+                    console.log(1);
+                    
+                }else if(e == 2){
+                    console.log(2);
+                }else if(e == 3){
+                    console.log(3);
+                }
+    }
+
+    function tz(e){
+        if(e == 1){
+            location.href="shangwu.html"
+        }else if(e == 2){
+            location.href="about.html"
+        }else if(e == 3){
+            location.href="lianxi.html"
+        }
+    }
+    
+    function xz(e){
+        if(e == 1){
+            alert("安卓包正在努力开发中，敬请期待");return;
+   //          $.ajax({
+			//     type: 'post',
+			//     url:'http://www.shand2.cn/appapi/appapi/',
+			//     data:{service:'Home.GetupdateUrl'},
+			//     dataType:'json',
+			//     success:function (data) {
+			//         console.log(data.data.url)
+			// 		window.location.href=data.data.url
+			//     }
+			// });
+        }else{
+            alert("苹果包正在努力开发中，敬请期待");return;
+            //window.location.href="https://apps.apple.com/cn/app/id1504597946"
+        }
+    }
+
+    $(function(){
+        $('.xzbox1').mouseover(function(){
+            $(this).addClass('xzbox1check')
+            $('.xzimg1').prop('src',' ./img/android-black.png')
+        }).mouseout(function(){
+            $(this).removeClass('xzbox1check')
+            $('.xzimg1').prop('src','./img/android_blue.png')
+        })
+        $('.xzbox2').mouseover(function(){
+            $(this).addClass('xzbox2check')
+            $('.xzimg2').prop('src','./img/iOS-blue.png')
+        }).mouseout(function(){
+            $(this).removeClass('xzbox2check')
+            $('.xzimg2').prop('src','./img/ios_black.png')
+        })
+    })
+			$(document).ready(function(){
+			
+				/* Converting the #box div into a bounceBox: */
+				$('#box').bounceBox();
+			
+				/* Listening for the click event and toggling the box: */
+				$('.image').click(function(e){
+			
+					$('#box').bounceBoxToggle();
+					e.preventDefault();
+				});
+				
+				/* When the box is clicked, hide it: */
+				$('.close').click(function(){
+					$('#box').bounceBoxHide();
+                });
+                
+                $(window).scroll(function(){
+                    let st = $(this).scrollTop()
+                    console.log(st)
+                    if(st > 200&&st <500){
+                        $('.litem1').show().addClass('animate__fadeInLeft')
+                        $('.ltxt1').show().addClass('animate__fadeInRight')
+                    }else if(st > 500&&st < 900){
+                        $('.litem2').show().addClass('animate__flip')
+                        $('.ltxt2').show().addClass('animate__flipInY')
+                    }else if(st > 900&&st < 1400){
+                        $('.litem3').show().addClass('animate__rotateInDownLeft')
+                        $('.ltxt3').show().addClass('animate__rotateInDownRight')
+                    }else if(st > 1400&& st < 1800){
+                        $('.litem4').show().addClass('animate__zoomInDown')
+                        $('.ltxt4').show().addClass('animate__zoomInUp')
+                    }else if(st > 1800 && st <2100){
+                        $('.litem5').show().addClass('animate__slideInUp')
+                        $('.ltxt5').show().addClass('animate__slideInDown')
+                    }
+                })
+			});
+</script>
+</html>

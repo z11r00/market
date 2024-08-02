@@ -1,0 +1,694 @@
+@charset "UTF-8";
+/* reset-start */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+    -webkit-touch-callout: none;
+}
+
+input, textarea {
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    -moz-user-select: text;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 12px;
+    font-family: "微软雅黑", Microsoft YaHei, Arial, Lucida, Verdana, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, SimSun, sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+.clearfix {
+    zoom: 1;
+    display: inline-block;
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+ul, ol, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+    outline: none;
+}
+
+a:hover {
+    color: #15b9ef;
+}
+
+a:focus {
+    outline: none;
+}
+
+img, fieldset, input, textarea {
+    border: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+button:active {
+    border-bottom: 0px;
+}
+
+input, button, select, textarea {
+    outline: none;
+}
+
+.button, .button:link, .button:visited {
+    padding: 0 1.8em;
+    line-height: 2.5em;
+}
+
+strong {
+    font-weight: normal;
+}
+
+/* reset-end */
+
+/* base-start */
+a, button, .btn {
+    cursor: pointer;
+}
+
+.img-wrapper {
+    display: inline-block;
+}
+
+.img-wrapper img {
+    width: 100%;
+}
+
+.icon, .btn {
+    display: inline-block;
+}
+
+i.icon {
+    font-style: inherit;
+}
+
+/* base-end */
+
+/* box-start */
+.p-r {
+    position: relative;
+}
+
+.p-a {
+    position: absolute;
+}
+
+.p-f {
+    position: fixed;
+}
+
+.fl-l {
+    float: left;
+}
+
+.fl-r {
+    float: right;
+}
+
+.t-l {
+    text-align: left;
+}
+
+.t-c {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -321px;
+    text-align: center;
+}
+
+.t-r {
+    text-align: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* box-end */
+
+/* header-start */
+.layout-header .layout {
+    position: relative;
+    padding: 0 20px;
+    margin: 0 auto;
+    z-index: 1;
+}
+.sect-weixinbtn{animation: shake 2s 0s infinite linear both;
+			-webkit-animation: shake 2s 0s infinite linear both;}
+			.sect-weibobtn{
+				animation: shake 4.5s 0s infinite linear both;
+				-webkit-animation: shake 4.5s 0s infinite linear both;
+			}
+			.sect-chuyebtn{
+				animation: shake 5s 0s infinite linear both; 
+				-webkit-animation: shake 5s 0s infinite linear both;
+			}
+			/*摇晃感*/
+		@-webkit-keyframes shake{
+			0%{-webkit-transform: translate(0px,0px);}
+			20%{-webkit-transform: translate(-5px,-5px);}
+			40%{-webkit-transform: translate(4.5px,-5px);}
+			60%{-webkit-transform: translate(6px,6px);}
+			80%{-webkit-transform: translate(-6px,6px);}
+			100%{-webkit-transform: translate(0px,0px);}
+		}
+		@keyframes shake{
+			0%{transform: translate(0px,0px);}
+			20%{transform: translate(-5px,-5px);}
+			40%{transform: translate(4.5px,-5px);}
+			60%{transform: translate(6px,6px);}
+			80%{transform: translate(-6px,6px);}
+			100%{transform: translate(0px,0px);}
+		}
+		.img-wrapper{ animation:ZYP3TWINKLE 2s linear infinite;
+			-webkit-animation:ZYP3TWINKLE 2s linear infinite;}
+		@keyframes ZYP3TWINKLE{
+			0%{ opacity:0.3;}
+			50%{ opacity:1;}
+			100%{ opacity:0.3;}
+			}
+		@-webkit-keyframes ZYP3TWINKLE{
+			0%{ opacity:0.3;}
+			50%{ opacity:1;}
+			100%{ opacity:0.3;}
+			}
+
+/* header-end */
+.layout-footer .chuye-info {
+    width: 239px;
+    position: absolute;
+    right: 77px;
+    top: -122px;
+}
+
+.layout-footer .copyright {
+    font-size: 12px;
+    color: white;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-left: 36px;
+    position: absolute;
+}
+
+.layout-footer .join-us {
+    top: 23px;
+    position: absolute;
+    height: 14px;
+    line-height: 14px;
+    width: 130px;
+    font-size: 12px;
+    color: #fff;
+    right: 0;
+    text-align: center;
+}
+
+.layout-footer .join-us a {
+    color: #fff;
+}
+
+.layout-footer .join-us a:hover {
+    color: #fff;
+}
+
+.layout-footer .contact-us span {
+    cursor: pointer;
+}
+
+.layout-footer .contact-us {
+    top: 23px;
+    position: absolute;
+    height: 14px;
+    line-height: 14px;
+    width: 130px;
+    font-size: 12px;
+    color: #fff;
+    right: 130px;
+    text-align: center;
+    border-right: 1px solid white;
+}
+
+.chuye-lightapp-login {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.chuye-lightapp-login .maskLayer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 777777;
+    background: #000000;
+    opacity: 0.8;
+    top: 0;
+    width: 110% \9;
+    filter: alpha(opacity=80);
+}
+
+.chuye-lightapp-login .loginFrm {
+    width: 290px;
+    height: 288px;
+    background: #fff;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 888888;
+    left: 39%;
+    top: 20%;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.chuye-lightapp-login .loginFrm .header {
+    height: 48px;
+    text-align: left;
+}
+
+.chuye-lightapp-login .loginFrm .header .title {
+    font-size: 14px;
+    line-height: 46px;
+    margin-left: 20px;
+}
+
+.chuye-lightapp-login .loginFrm .header .close {
+    font-size: 18px;
+    line-height: 46px;
+    margin-left: 50%;
+}
+
+.chuye-lightapp-login .loginFrm .body {
+    padding: 0 10px;
+}
+
+.chuye-lightapp-login .loginFrm .body label {
+    display: block;
+    margin: 12px 0 0;
+}
+
+.chuye-lightapp-login .loginFrm .body label input {
+    height: 38px;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    width: 84%;
+    padding: 2px 10px;
+}
+
+.chuye-lightapp-login .loginFrm .body #btnLogin {
+    width: 90%;
+    background: #f34254;
+    color: #fff;
+    padding: 12px 0;
+    border-radius: 8px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.yunqi-lightapp-erweima {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.yunqi-lightapp-erweima .maskLayer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 777777;
+    background: #707676;
+    opacity: 0.5;
+    top: 0;
+    width: 110% \9;
+    filter: alpha(opacity=50);
+}
+
+.yunqi-lightapp-erweima .erweima {
+    width: 578px;
+    height: 580px;
+    background: #fff;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 888888;
+    left: 50%;
+    margin-left: -289px;
+    top: 50%;
+    margin-top: -290px;
+    text-align: center;
+    _left: 50%;
+    _margin_left: -270px;
+    _position: absolute;
+    _top: 940px;
+}
+
+.yunqi-lightapp-erweima .c-icon.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.yunqi-lightapp-erweima .erweima img {
+    max-width: 220px;
+    margin-top: 30%;
+    _margin-top: 10%;
+}
+
+.yunqi-lightapp-erweima .erweima p {
+    font-size: 24px;
+    margin-top: 75px;
+    color: #696969;
+}
+
+/* footer-end */
+
+/* icon-start */
+.c-icon {
+    display: inline-block;
+    background: url(../images/bg-icon-columns.png) no-repeat;
+}
+
+.yunqi-lightapp-erweima .c-icon.close {
+    width: 22px;
+    height: 22px;
+    background-position: 0 -194px;
+}
+
+.yunqi-lightapp-erweima .c-icon.close:hover {
+    background-position: 0 -221px;
+}
+
+.c-icon.weixin-btn {
+    width: 136px;
+    height: 136px;
+    background-position: -110px -230px;
+    font-size: 14px;
+    color: white;
+    line-height: 204px;
+    font-style: normal;
+}
+
+.c-icon.weibo-btn {
+    width: 106px;
+    height: 44px;
+    background: url(../images/chuye-login-icon.png) 20px -58px no-repeat;
+    background-size: 50px auto;
+    font-size: 14px;
+    color: white;
+    line-height: 42px;
+    font-style: normal;
+    background-color: #ff5752;
+    border-radius: 22px;
+    padding-left: 30px;
+}
+
+.c-icon.chuye-btn {
+    width: 106px;
+    height: 44px;
+    background: url(../images/chuye-login-icon.png) 20px 12px no-repeat;
+    background-size: 50px auto;
+    font-size: 14px;
+    color: white;
+    line-height: 42px;
+    font-style: normal;
+    background-color: #bfbfbf;
+    border-radius: 22px;
+    padding-left: 28px;
+}
+
+/* icon-end */
+
+/* modules-start */
+html.fixed-footer,
+.fixed-footer body {
+    height: 100%;
+}
+
+.fixed-footer #layout-wrapper {
+    position: relative;
+    min-height: 100%;
+    background: #F5F5F5;
+    overflow: hidden;
+}
+
+.fixed-footer .layout-body {
+    padding-bottom: 182px;
+}
+
+.fixed-footer .layout-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* modules-end */
+
+.login-chuye .sect.scan-chuye-erweima .img-wrapper {
+    width: 250px;
+    margin: 0 auto;
+    border: solid 1px #ccc;
+    box-shadow: 0 2px 3px #ccc;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+.login-chuye .sect {
+    margin: 30px 0 5px;
+}
+
+.login-chuye .sect-weixinbtn {
+    margin: 95px 0 0;
+}
+
+.login-chuye .sect-weibobtn {
+    margin: 40px 0 5px;
+}
+
+.login-chuye .sect-chuyebtn {
+    margin: 12px 0 0;
+}
+
+.login-chuye .g-icon.sina {
+    background-position: -37px -167px;
+}
+
+.login-chuye .g-icon.weixin {
+    background-position: -37px -205px;
+}
+
+.login-chuye .g-icon.qq {
+    background-position: -37px -242px;
+}
+
+.login-chuye .g-icon.tencent-weibo {
+    width: 33px;
+    height: 33px;
+    background-position: -37px -277px;
+}
+
+.login-chuye .layout-header {
+    background: none;
+    color: #fff;
+    padding: 33px 20px;
+}
+
+.login-chuye .layout-header a {
+    color: #c9c9c9;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.login-chuye .layout-header a:hover {
+    color: #a9a9a9;
+}
+
+.login-chuye .layout-header a:hover .grey-arrow-left {
+    background-position: -34px -139px;
+}
+
+.login-chuye p {
+    line-height: 26px;
+    font-size: 12px;
+    color: #acacac;
+}
+
+.login-chuye p a {
+    color: #ff7291;
+    text-decoration: underline;
+}
+
+.g-icon {
+    display: inline-block;
+    background: url(../images/bg-icon-global.png) no-repeat;
+}
+
+.g-icon.grey-arrow-left {
+    width: 18px;
+    height: 18px;
+    background-position: 0 -139px;
+    vertical-align: bottom;
+    margin-right: 7px;
+}
+
+.login-chuye .layout-footer {
+    padding: 0;
+    height: 60px;
+    background: url(../images/chuye-login-footer.png) center center;
+    background-size: cover;
+}
+
+.login-chuye .layout-footer .nav {
+    float: left;
+    margin-top: 8px;
+}
+
+.login-chuye .layout-footer .nav a {
+    color: rgb(185, 185, 185);
+    font-size: 14px;
+}
+
+.login-chuye .layout-footer .third-party-links {
+    float: right;
+    margin-top: 0;
+}
+
+.login-chuye .layout-footer .g-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.login-chuye .g-icon.sina {
+    background-position: -37px -167px;
+}
+
+.login-chuye .g-icon.weixin {
+    background-position: -37px -205px;
+}
+
+.login-chuye .g-icon.qq {
+    background-position: -37px -242px;
+}
+
+.login-chuye .g-icon.tencent-weibo {
+    width: 33px;
+    height: 33px;
+    background-position: -37px -277px;
+}
+
+.fixed-footer.login-chuye #layout-wrapper {
+    background: none;
+}
+
+.login-chuye .login-guide {
+    position: absolute;
+    top: 50%;
+    margin-top: -160px;
+    left: 50%;
+    display: block;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    width: 230px;
+    height: auto;
+}
+
+.ie.login-chuye .login-guide {
+    z-index: 0;
+}
+
+.login-chuye .layout-footer .third-party-links .sina:hover {
+    background-position: 0 -518px;
+}
+
+.login-chuye .layout-footer .third-party-links .weixin:hover {
+    background-position: 0 -558px;
+}
+
+.login-chuye .layout-footer .third-party-links .qq:hover {
+    background-position: 0 -596px;
+}
+
+.login-chuye .layout-footer .third-party-links .tencent-weibo:hover {
+    background-position: 0 -635px;
+}
+
+.login-chuye .layout-footer .nav a:hover {
+    color: rgb(0, 169, 235);
+}
+
+.img-wrapper.chuye-logo-wrapper {
+    width: 204px;
+}
+
+/*对于非chrome内核的浏览器显示换浏览器的提示*/
+.not-support-page {
+    position: absolute;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #282828;
+}
+
+.not-support-page .not-support-page-word {
+    margin: 70px auto;
+    display: block;
+    width: 450px;
+    height: 57px;
+    background: url(../images/not-support-page.png) no-repeat;
+    background-size: 100% auto;
+}
+
+
+

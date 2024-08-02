@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+public/
+.deploy*/
+.git/
+.github/
+.vs/
+.idea/
+_multiconfig.yml

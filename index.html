@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang=zh-CN>
+<head>
+    <meta charset=UTF-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+	<meta name=msapplication-TileColor content=#da532c>
+    <meta name=theme-color content=#ffffff>
+    <title>ZERO开发公开资源网</title>
+    <meta name="keywords" content="营销软件,商业源码,棋牌程序,网页游戏源码,私服程序,英文seo,英文模板,英文数据,商业插件,资源分享网" />
+	<meta name="description" content="一个给程序员或独立运营者提供免费资源的网站，敬请期待zerofc.cn！" />
+	<link rel="shortcut icon" href="https://www.zerofc.cn/img/favicon.png">
+    <link rel="stylesheet prefetch" href="https://cdn.bootcss.com/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet prefetch" href="main.css?20190815">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="data.js?20190815"></script>
+</head>
+
+<body>
+    <nav class=navbar>
+        <div class=container>
+            <div class=navbar-brand>
+				<a class=navbar-item href="https://www.zerofc.cn/">
+					<img alt="ZERO开发公开资源网" src="imgs/LOGO.png">
+				</a>
+            </div>
+            <div id=navbarMenu class=navbar-menu>
+                <div class=navbar-end> 
+					<a href="https://www.zerofc.cn/" class="navbar-item is-active" target="_blank"> 主站 </a>  
+					<a href="https://image-static.segmentfault.com/170/672/1706722225-666d5d93e0e9d_fix732" class=navbar-item target="_blank"> 微信公众号 </a>  
+                    <div class="navbar-item has-dropdown is-hoverable"> 
+						<a class=navbar-link> 我的小游戏 </a> 
+                        <div class=navbar-dropdown> 
+							<a href="https://image-static.segmentfault.com/389/535/3895359458-66ac775e403bc_fix732" class=navbar-item target="_blank"> 有用工具盒 </a>
+							<a href="https://image-static.segmentfault.com/198/258/1982580468-66ac778bc585b_fix732" class=navbar-item target="_blank"> 忍者疾风转 </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+	
+    <section class=section>
+        <div class=container>
+            <div id=flow> 
+				<span class=flow-1></span>  <span class=flow-2></span>  <span class=flow-3></span> 
+            </div>
+			
+            <div class="row columns">
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="baidu_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+								<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">ZERO开发博客</a>
+							</p>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="baidu_now_title" onclick="refresh('baidu_now')">独立</a>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="baidu_today_title" onclick="refresh('baidu_today')">开发者</a>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="baidu_week_title" onclick="refresh('baidu_week')">博客</a>
+							<font id="baidu_num" size="1" style="color:#bdbdbd;padding:0.5rem;font-weight:bolder;">副业探索</font>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="baidu_content">
+                                    <a href="https://www.zerofc.cn/" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="baidu_time" title="热度" style="color:#363636;">热度：96</p>
+						</footer>
+                    </div>
+                </div>
+				
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="weibo_head" class=card-header>
+                            <p class=card-header-title>
+								<span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+								<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">编程导航</a></p>
+								<font size="1"  id="weibo_num" style="color:#bdbdbd;padding:0.5rem;font-weight:bolder;">网站收藏夹</font>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="weibo_content">
+                                    <a href="https://www.zerofc.cn/webstack/" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="weibo_time" title="更新时间" style="color:#363636;">热度：95</p>
+						</footer>
+                    </div>
+                </div>
+				
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="weixin_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">小北游戏平台</a></p>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="weixin_title" onclick="refresh('weixin')">Cocos</a>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="weixin_hot_title" onclick="refresh('weixin_hot')">FC模拟器</a>
+							<font size="1" id="weixin_num" style="color:#bdbdbd;padding:0.5rem;font-weight:bolder;">H5游戏</font>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="weixin_content">
+									<a href="https://www.zerofc.cn/game/" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="weixin_time" title="更新时间" style="color:#363636;">热度：88</p>
+						</footer>
+                    </div>
+                </div>
+            </div>
+			
+            <div class="row columns">
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="v2ex_head" class=card-header>
+                            <p class=card-header-title><span class=icon>
+							<img src="imgs/LOGO.png" width=24 height=24 /></span><a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">小北在线工具</a>
+							</p>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="v2ex_content">
+                                    <a href="https://www.zerofc.cn/wtools/" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="v2ex_time" title="更新时间" style="color:#363636;">热度：81</p>
+						</footer>
+                    </div>
+                </div>
+				
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="jandan_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">小北资源城</a></p>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="jandan_content">
+                                    <a href="http://www.zerofc.cn/mall/" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="jandan_time" title="更新时间" style="color:#363636;">热度：79</p>
+						</footer>
+                    </div>
+                </div>
+				
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="zhihu_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">小北项目中心</a></p>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="zhihu_good_title" onclick="refresh('zhihu_good')">小游戏</a>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="zhihu_hot_title" onclick="refresh('zhihu_hot')">APP</a>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="zhihu_daily_title" onclick="refresh('zhihu_daily')">小程序</a>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="zhihu_content">
+                                    <a href="https://www.zerofc.cn/proc/#/" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="zhihu_time" title="更新时间" style="color:#363636;">热度：99</p>
+						</footer>
+                    </div>
+                </div>
+				
+            </div>
+			
+            <div class="row columns">
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="hostloc_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">轻量在线工具集</a></p>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="hostloc_content">
+                                    <a href="http://tools.zerofc.cn/" target="_blank"><p id="baidu_loading">点击进入</p></a>
+									</ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="hostloc_time" title="更新时间" style="color:#363636;">热度：69</p>
+						</footer>
+                    </div>
+                </div>
+				
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="smzdm_article_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">小北工具箱</a></p>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="smzdm_article_today_title" onclick="refresh('smzdm_article_today')">独立</a>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="smzdm_article_week_title" onclick="refresh('smzdm_article_week')">APP</a>
+							<font size="1" id="weixin_num" style="color:#bdbdbd;padding:0.5rem;font-weight:bolder;">落地页</font>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="smzdm_article_content">
+                                    <a href="https://www.zerofc.cn/market/land_pages/bqs_toolsbox/index.html" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="smzdm_article_time" title="更新时间" style="color:#363636;">热度：91</p>
+						</footer>
+                    </div>
+                </div>
+				
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="douban_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">ZERO开发</a></p>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="smzdm_article_today_title" onclick="refresh('smzdm_article_today')">微信</a>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="smzdm_article_today_title" onclick="refresh('smzdm_article_today')">公众号</a>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="douban_content">
+                                    <a href="https://image-static.segmentfault.com/170/672/1706722225-666d5d93e0e9d_fix732" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="douban_time" title="更新时间" style="color:#363636;">热度：99</p>
+						</footer>
+                    </div>
+                </div>
+            </div>
+			
+            <div class="row columns">
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="hacpai_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">有用工具盒</a></p>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="hacpai_play_title" onclick="refresh('hacpai_play')">微信</a>
+							<a class="custom-card-toggle" style="color:#bdbdbd;" id="hacpai_hot_title" onclick="refresh('hacpai_hot')">小程序</a>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="hacpai_content">
+                                    <a href="https://image-static.segmentfault.com/389/535/3895359458-66ac775e403bc_fix732" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="hacpai_time" title="更新时间" style="color:#363636;">热度：94</p>
+						</footer>
+                    </div>
+                </div>
+				
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="guokr_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">忍者疾风转</a></p>
+							<font size="1" id="weixin_num" style="color:#bdbdbd;padding:0.5rem;font-weight:bolder;">微信小程序</font>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="guokr_content">
+                                    <a href="https://image-static.segmentfault.com/198/258/1982580468-66ac778bc585b_fix732" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="guokr_time" title="更新时间" style="color:#363636;">热度：98</p>
+						</footer>
+                    </div>
+                </div>
+				
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="chouti_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">实用工具箱</a></p>
+							<font size="1" id="weixin_num" style="color:#bdbdbd;padding:0.5rem;font-weight:bolder;">QQ小程序</font>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="chouti_content">
+                                    <a href="https://image-static.segmentfault.com/236/602/236602261-66ac8276ea541_fix732" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="chouti_time" title="更新时间" style="color:#363636;">热度：92</p>
+						</footer>
+                    </div>
+                </div>
+            </div>
+			
+            <div class="row columns">
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="cnbeta_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">忍者疾风转</a></p>
+							<font size="1" id="weixin_num" style="color:#bdbdbd;padding:0.5rem;font-weight:bolder;">抖音小游戏</font>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="cnbeta_content">
+                                    <a href="https://image-static.segmentfault.com/465/256/465256446-66aa03cab7e07_fix732" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="cnbeta_time" title="更新时间" style="color:#363636;">热度：96</p>
+						</footer>
+                    </div>
+                </div>
+				
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="mop_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/LOGO.png" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">北桥苏</a></p>
+							<font size="1" id="weixin_num" style="color:#bdbdbd;padding:0.5rem;font-weight:bolder;">视频号</font>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="mop_content">
+                                    <a href="https://image-static.segmentfault.com/389/760/3897605972-66ac879fe1149_fix732" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="mop_time" title="更新时间" style="color:#363636;">热度：75</p>
+						</footer>
+                    </div>
+                </div>
+				
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <header id="solidot_head" class=card-header>
+                            <p class=card-header-title><span class=icon><img src="imgs/yiquxiaobei.jpg" width=24 height=24 /></span>
+							<a title="点击刷新 (服务器每5分钟采集一次)" style="color:#363636;">一曲小北</a></p>
+							<font size="1" id="weixin_num" style="color:#bdbdbd;padding:0.5rem;font-weight:bolder;">视频号</font>
+                        </header>
+                        <div class=card-content>
+                            <div class="content scroll-box">
+                                <ol id="solidot_content">
+                                    <a href="imgs/shipinhao_qu.jpg" target="_blank"><p id="baidu_loading">点击进入</p></a>
+                                </ol>
+                            </div>
+                        </div>
+						<footer class="custom-card-footer">
+                            <p id="solidot_time" title="更新时间" style="color:#363636;">热度：85</p>
+						</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+    </section>
+	<div class=container>
+		<div class="content has-text-centered"> 
+			<p>———— 更多内容敬请期待 ————</p>
+		</div>
+	</div>
+</body>
+</html>
